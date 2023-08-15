@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Abhinav's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+                
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="name">Abhinav</span>
+                <div>and i am a passionate</div>
+                <span id="element"></span>
+                <div>
+                    <button type="button" onclick="downloadResume()"><span class="designButton"></span>Download Resume</button>
+                    <button type="button" onclick="redirectToLink()"><span class="designButton"></span>Visit Github</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img id="dev" src="developer.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What have I done so far</span>
+            <h1>Experience</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="top-image" src="dev.png" alt="">
+                    <div class="vertical-title">
+                        Competitive Programmer
+                    </div>
+                    <div class="vertical-desc">
+                        Codechef: 2-star rating(1471) | LeetCode: 164 problems solved, rating(1554), solved over 300 problems over various coding platforms.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="top-image" src="frontend2.png" alt="">
+                    <div class="vertical-title">
+                        Front-end Web Developer
+                    </div>
+                    <div class="vertical-desc">
+                        Created amazing projects using HTML, styled them using CSS and provided functionalities using javascript.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="top-image" src="datastructures.png" alt="">
+                    <div class="vertical-title">
+                        Data Structures and Algorithms
+                    </div>
+                    <div class="vertical-desc">
+                        Completed data structures and solved over 150 problems based on data structure and algorithms on the coding platforms like codechef, leetcode, coding ninjas and geeksforgeeks.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="top-image" src="languages.png" alt="">
+                    <div class="vertical-title">
+                        Programming Languages
+                    </div>
+                    <div class="vertical-desc">
+                        I have a strong hold on the C++ programming language and I have experience with C programming language and Java programming language.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="flex">
+            <div class="footer-first">
+                <h3>Abhinav's Developer Portfolio</h3>
+            </div>
+            <div class="footer-third">
+                <span>Profile Links</span>
+                <ul>
+                    <li><a href="https://www.codechef.com/users/dark_berries">Codechef</a></li>
+                    <li><a href="https://leetcode.com/dark_berries/">Leetcode</a></li>
+                    <li><a href="https://auth.geeksforgeeks.org/user/abhinav2xaeg/practice">GeeksForGeeks</a></li>
+                </ul>
+            </div>
+            <div class="footer-second">
+                <span>Contact Me</span>
+                <ul>
+                    <li><a href="mailto:abhinav2003125@gmail.com">Email</a></li>
+                    <li><a href="https://www.instagram.com/abhinav_yadav25/">Instagram</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-rights">Copyright &#169 www.abhinavsportfolio.com | All rights reserved</div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer', 'Competitive Programmer'],
+          typeSpeed: 50,
+        });
+        function redirectToLink() {
+            window.location.href = "https://github.com/blueberries25"; 
+        }
+        function downloadResume() {
+            var resumeURL = 'myResume.pdf';
+            var link = document.createElement('a');
+            link.href = resumeURL;
+            link.download = 'abhinav_resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+      </script>
+</body>
+</html>
